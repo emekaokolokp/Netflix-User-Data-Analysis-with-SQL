@@ -1,0 +1,200 @@
+🎬 Netflix User Data Analysis with SQL
+📌 Project Overview
+
+This project uses SQL to analyze a large dataset of Netflix user information. The goal is to uncover insights about user behavior, content preferences, subscription plans, and churn risk, while demonstrating practical SQL query skills that can be applied to real-world business problems.
+
+The dataset includes information such as subscription length, watch time, customer satisfaction, engagement rate, device usage, preferred genres, region, churn status, and more.
+
+🎯 Objective
+
+To analyze Netflix’s user dataset using SQL queries in order to extract meaningful insights about viewing habits, engagement levels, churn trends, and subscription patterns.
+
+🏆 Aim
+
+The aim of this project is to demonstrate SQL for data analysis by answering real business questions related to streaming behavior, helping guide strategies for retention, engagement, and revenue growth.
+
+✅ Goals
+
+Data Exploration & Cleaning – Understand the dataset and prepare it for analysis.
+
+User Behavior Analysis – Study watch time, devices used, satisfaction, and engagement.
+
+Content Preferences – Identify top genres and patterns in user choices.
+
+Churn & Retention – Analyze churn status and factors influencing customer drop-off.
+
+Subscription Insights – Compare user behavior across subscription plans.
+
+Business Recommendations – Provide data-driven suggestions for retention and growth.
+
+## 🛠️ Tools Used
+| Tool            | Purpose                                |
+|-----------------|----------------------------------------|
+| **PostgreSQL**  | SQL database for data storage & queries|
+| **pgAdmin 4**   | GUI for PostgreSQL                     |
+| **CSV**         | For importing/exporting data           |
+
+📂 Dataset
+
+The dataset (netflix_large_user_data.csv) contains the following columns:
+
+Customer ID
+
+Subscription Length (Months)
+
+Customer Satisfaction Score (1-10)
+
+Daily Watch Time (Hours)
+
+Engagement Rate (1-10)
+
+Device Used Most Often
+
+Genre Preference
+
+Region
+
+Payment History (On-Time/Delayed)
+
+Subscription Plan
+
+Churn Status (Yes/No)
+
+Support Queries Logged
+
+Age
+
+Monthly Income ($)
+
+Promotional Offers Used
+
+Number of Profiles Created
+
+📊 Expected Insights
+
+Identify loyal/power users driving high engagement.
+
+Understand genre popularity and regional differences.
+
+Highlight which subscription plans dominate the customer base.
+
+Estimate churn risk and the role of satisfaction in retention.
+
+Discover which devices are most important for Netflix streaming.
+
+Provide business recommendations for customer retention and personalized marketing.
+
+📊 Project Analysis Summary
+
+This SQL analysis of the Netflix dataset explored key business questions and revealed the following findings:
+
+Top Users by Watch Time
+
+A small number of users account for the highest total watch hours, highlighting a core segment of loyal, heavy viewers.
+
+Genre Preferences
+
+Action, Drama, and Comedy emerged as the most popular genres, driving majority engagement across regions.
+
+Subscription Plan Trends
+
+Standard and Premium plans are more widely adopted than Basic, showing customer preference for features such as multiple profiles and higher streaming quality.
+
+Churn Risk Assessment
+
+Approximately X% of users (calculated from queries) are at risk of churn. These users generally report lower satisfaction and engagement.
+
+Regional Viewing Patterns
+
+North America and Europe show higher average daily watch times, while other regions lag, suggesting more growth opportunities.
+
+Device Usage Behavior
+
+Smart TVs and Mobile devices dominate as the most common streaming platforms, reinforcing the importance of optimizing Netflix’s experience on these devices.
+
+Satisfaction vs. Churn
+
+Higher customer satisfaction correlates strongly with lower churn, indicating that improving satisfaction directly reduces cancellations.
+
+Engagement by Plan
+
+Premium subscribers record higher engagement rates compared to Basic plan users, suggesting that value-added features improve customer stickiness.
+
+👉 This summary bridges the raw queries with business interpretation, making it clear to recruiters or GitHub visitors that
+
+📁 Repository Structure
+📂 netflix-sql-project
+   ├── 📜 README.md  ← Project documentation
+   ├── 📂 queries    ← SQL scripts for analysis
+   │     ├── top_users.sql
+   │     ├── top_genres.sql
+   │     ├── subs_plan_users.sql
+   │     ├── churn_rate.sql
+   │     ├── avg_watch_by_region.sql
+   │     ├── devices_used.sql
+   │     ├── churn_vs_satisfaction.sql
+   │     └── engagement_by_plan.sql
+   ├── 📂 data
+   │     └── netflix_large_user_data.csv (sample/anonymized dataset)
+
+📌 Insights & Recommendations
+🔎 Key Insights
+
+Top Users & Power Viewers
+
+A small group of users contribute disproportionately to total watch time. These “power users” are highly valuable and represent the most loyal customer base.
+
+Genre Preferences
+
+Certain genres (e.g., Action, Drama, Comedy) consistently dominate user preferences. Niche genres have lower engagement, but may appeal strongly in specific regions.
+
+Subscription Plans
+
+The Standard and Premium plans attract the most users, suggesting that customers value content quality and multiple profiles. Basic plans have lower adoption.
+
+Churn Risk
+
+A noticeable portion of users are marked as churned (Yes). Many of these users also show lower customer satisfaction scores and lower engagement rates, indicating dissatisfaction as a key churn driver.
+
+Regional Watch Time
+
+Users in regions like North America and Europe tend to have higher daily watch time compared to Asia and other regions. This signals stronger market maturity.
+
+Device Usage
+
+Smart TVs and Mobile devices dominate streaming usage. Laptops and tablets are secondary. This suggests Netflix should prioritize user experience on Smart TVs and Mobile platforms.
+
+Customer Satisfaction & Engagement
+
+Higher engagement rates and satisfaction scores correlate strongly with lower churn rates. Customers who engage daily and report high satisfaction are far less likely to leave.
+
+💡 Recommendations
+
+Retention Campaigns
+
+Target churn-risk users with personalized offers, such as discounts, loyalty rewards, or exclusive early access to new shows.
+
+Content Investment
+
+Double down on top-performing genres (Action, Drama, Comedy) while selectively investing in region-specific content for localized growth.
+
+Subscription Strategy
+
+Promote Premium and Standard plans with bundled offers (e.g., family packages, multiple profiles) since these already show strong adoption.
+
+User Experience Optimization
+
+Enhance Smart TV and Mobile app performance, as these are the most popular devices for streaming. Smooth playback and personalized recommendations should be priorities.
+
+Customer Satisfaction Initiatives
+
+Launch initiatives to improve satisfaction scores — e.g., better customer support, AI-driven recommendations, and interactive features.
+
+Regional Expansion
+
+In regions with lower engagement, Netflix can run localized campaigns, leverage regional partnerships, and tailor content to cultural preferences.
+
+
+🚀 Conclusion
+
+This project showcases how SQL can be applied to real-world datasets for generating business insights. The queries provide a foundation for reporting, dashboards, and strategic decisions in the streaming industry.
