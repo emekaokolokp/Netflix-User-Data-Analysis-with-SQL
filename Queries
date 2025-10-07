@@ -1,0 +1,73 @@
+create table Netflix_table (
+customer_id varchar,
+subscription_length int,
+customer_satisfaction_score int,
+watch_time int,
+engagement_rate int,
+device_used_most_often varchar,
+genre_preference varchar,
+region varchar,
+payment_history varchar,
+subscription_plan varchar,
+status int,
+support_queries_logged int,
+age int,
+monthly_income int,
+promotional_offers_used int,
+number_of_profiles_created int
+);
+ALTER TABLE netflix_table
+ALTER COLUMN customer_id TYPE VARCHAR(20);
+ALTER TABLE netflix_table
+ALTER COLUMN watch_time_hours TYPE DECIMAL(5,2);
+
+COPY Netflix_table
+FROM 'C:\Program Files\PostgreSQL\17\data\netflix_large_user_data.csv'
+DELIMITER ','
+CSV HEADER;
+
+SELECT customer_id, SUM(watch_time_hours) AS total_watch_time
+FROM Netflix_table
+GROUP BY customer_id
+ORDER BY total_watch_time DESC
+LIMIT 10;
+
+SELECT genre_preference, COUNT(*) AS total_users
+FROM Netflix_table
+GROUP BY genre_preference
+ORDER BY total_users DESC
+LIMIT 5;
+
+SELECT subscription_plan, COUNT(customer_id) AS total_users
+FROM Netflix_table
+GROUP BY subscription_plan
+ORDER BY total_users DESC;
+
+SELECT 
+  ROUND(
+    100.0 * COUNT(DISTINCT customer_id) 
+    / (SELECT COUNT(DISTINCT customer_id) FROM Netflix_table), 2
+  ) AS churn_risk_percentage
+FROM Netflix_table
+WHERE status = 'Yes';
+
+SELECT region, ROUND(AVG(watch_time_hours), 2) AS avg_watch_time
+FROM Netflix_table
+GROUP BY region
+ORDER BY avg_watch_time DESC;
+
+SELECT device_used_most_often, COUNT(*) AS usage_count
+FROM Netflix_table
+GROUP BY device_used_most_often
+ORDER BY usage_count DESC;
+
+SELECT status, 
+       ROUND(AVG(customer_satisfaction_score), 2) AS avg_satisfaction
+FROM Netflix_table
+GROUP BY status;
+
+SELECT subscription_plan, 
+       ROUND(AVG(engagement_rate), 2) AS avg_engagement
+FROM Netflix_table
+GROUP BY subscription_plan
+ORDER BY avg_engagement DESC;
