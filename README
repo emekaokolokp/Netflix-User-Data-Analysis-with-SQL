@@ -90,35 +90,80 @@ This SQL analysis of the Netflix dataset explored key business questions and rev
 
 Top Users by Watch Time
 
-A small number of users account for the highest total watch hours, highlighting a core segment of loyal, heavy viewers.
+A small number of users account for the highest total watch hours, highlighting a core segment of loyal, heavy viewers. Here is a list of top 10 users with the highest watch time hours
+
+"C00040"	5.00
+"C00834"	4.99
+"C00734"	4.99
+"C00085"	4.98
+"C00788"	4.97
+"C00034"	4.97
+"C00334"	4.97
+"C00328"	4.96
+"C00006"	4.95
+"C00209"	4.94
 
 Genre Preferences
 
-Action, Drama, and Comedy emerged as the most popular genres, driving majority engagement across regions.
+One would expect action, Drama, and Comedy to take the lead as the most popular genres, based on data available, sci-fi emerged as the most popular genres, driving majority engagement across regions. Below are the top 5
+
+"Sci-Fi"	167
+"Romance"	144
+"Drama"	144
+"Thriller"	140
+"Documentary"	139
 
 Subscription Plan Trends
 
 Standard and Premium plans are more widely adopted than Basic, showing customer preference for features such as multiple profiles and higher streaming quality.
 
+"subscription_plan"	"total_users"
+"Standard"	352
+"Premium"	329
+"Basic"	319
+
 Churn Risk Assessment
 
-Approximately X% of users (calculated from queries) are at risk of churn. These users generally report lower satisfaction and engagement.
+Approximately 53.90% of users (calculated from queries) are at risk of churn. These users generally report lower satisfaction and engagement.
 
 Regional Viewing Patterns
 
-North America and Europe show higher average daily watch times, while other regions lag, suggesting more growth opportunities.
+Africa and South America show higher average daily watch times. Below are the top 5 regions that show average daily watch times
+
+"region"	"avg_watch_time"
+"Africa"	2.91
+"South America"	2.86
+"Asia"	2.85
+"Europe"	2.77
+"North America"	2.76
 
 Device Usage Behavior
 
-Smart TVs and Mobile devices dominate as the most common streaming platforms, reinforcing the importance of optimizing Netflix’s experience on these devices.
+Laptops, Mobile devices and tablets dominate as the most common streaming platforms, obviously due to its portability. This places the importance of optimizing Netflix’s experience on these devices.
+
+"device_used_most_often"	"usage_count"
+"Laptop"	225
+"Mobile"	201
+"Tablet"	200
+"Smart TV"	189
+"Desktop"	185
 
 Satisfaction vs. Churn
 
-Higher customer satisfaction correlates strongly with lower churn, indicating that improving satisfaction directly reduces cancellations.
+Both status category are within the average satisfaction rating and this goes to show that there is need for alot of improvements to be made to improve ratings
+
+"status"	"avg_satisfaction"
+"No"	5.29
+"Yes"	5.45
 
 Engagement by Plan
 
-Premium subscribers record higher engagement rates compared to Basic plan users, suggesting that value-added features improve customer stickiness.
+Premium subscribers record higher engagement rates compared to Basic plan and standard users, suggesting that value-added features improve customer stickiness.
+
+"subscription_plan"	"avg_engagement"
+"Premium"	5.59
+"Basic"	5.50
+"Standard"	5.44
 
 👉 This summary bridges the raw queries with business interpretation, making it clear to recruiters or GitHub visitors that
 
